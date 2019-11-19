@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class BathHouseViewController: UIViewController {
 
@@ -16,6 +17,19 @@ class BathHouseViewController: UIViewController {
     var people = [People]()
     
     var name: String!
+    
+    var audioPlayer : AVAudioPlayer!
+    func voicePlay() {
+        let soundURL = Bundle.main.url(forResource: "BGMusic", withExtension: "mp3")
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL!)
+        }
+        catch {
+            print(error)
+        }
+        audioPlayer.play()
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +50,30 @@ class BathHouseViewController: UIViewController {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
                 self.activityIndicator.isHidden = true
+                
+            }
+            
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            for index in self.collectionView.visibleCells.indices {
+                let cell = self.collectionView.visibleCells[index]
+                cell.alpha = 0
+                
+                UIView.animate(withDuration: 3, delay: 0.1 * Double(index), usingSpringWithDamping: 0.1, initialSpringVelocity: 1, options: .curveLinear, animations: {
+                    cell.alpha = 1
+                }, completion: { (_) in
+
+                })
             }
         }
+
+        voicePlay()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        audioPlayer.stop()
     }
     
     @objc func addTapped() {
@@ -61,7 +97,6 @@ extension BathHouseViewController: UICollectionViewDataSource, UICollectionViewD
         
         
         if people.count - 1 >= indexPath.item {
-            print(people[indexPath.row])
             if people[indexPath.item].gender.rawValue == "male" {
                 if people[indexPath.item].withDrink == 0 {
                     cell.bathHouseImageView.image = UIImage(named: "Boy")

@@ -21,6 +21,7 @@
 		561A2B362383907200AC7651 /* BathHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A2B352383907200AC7651 /* BathHouseViewController.swift */; };
 		561A2B382383957400AC7651 /* BathHouseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A2B372383957400AC7651 /* BathHouseCollectionViewCell.swift */; };
 		561A2B3A23839DBE00AC7651 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A2B3923839DBE00AC7651 /* Api.swift */; };
+		561A2B3C2383D20800AC7651 /* BGMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 561A2B3B2383D20700AC7651 /* BGMusic.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		561A2B352383907200AC7651 /* BathHouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathHouseViewController.swift; sourceTree = "<group>"; };
 		561A2B372383957400AC7651 /* BathHouseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathHouseCollectionViewCell.swift; sourceTree = "<group>"; };
 		561A2B3923839DBE00AC7651 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		561A2B3B2383D20700AC7651 /* BGMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGMusic.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		561A2B1B238381B900AC7651 /* BathHouse */ = {
 			isa = PBXGroup;
 			children = (
+				561A2B3B2383D20700AC7651 /* BGMusic.mp3 */,
 				561A2B22238381B900AC7651 /* Main.storyboard */,
 				561A2B312383822D00AC7651 /* BathHouse.storyboard */,
 				561A2B3923839DBE00AC7651 /* Api.swift */,
@@ -160,6 +163,7 @@
 				561A2B29238381BA00AC7651 /* LaunchScreen.storyboard in Resources */,
 				561A2B26238381BA00AC7651 /* Assets.xcassets in Resources */,
 				561A2B322383822D00AC7651 /* BathHouse.storyboard in Resources */,
+				561A2B3C2383D20800AC7651 /* BGMusic.mp3 in Resources */,
 				561A2B24238381B900AC7651 /* Main.storyboard in Resources */,
 				561A2B342383825600AC7651 /* Beverage.storyboard in Resources */,
 			);
