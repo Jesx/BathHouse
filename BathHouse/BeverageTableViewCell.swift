@@ -10,6 +10,9 @@ import UIKit
 
 class BeverageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var beverageImage: UIImageView!
+    @IBOutlet weak var beverageNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
