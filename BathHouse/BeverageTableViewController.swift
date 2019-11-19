@@ -42,11 +42,11 @@ class BeverageTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let alert = UIAlertController(title: "要買 \(beverageItems!.data[indexPath.item].drink_name) 嗎？", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "要喝 \(beverageItems!.data[indexPath.item].drink_name) 嗎？", message: "", preferredStyle: .alert)
         
-        let alreadyBuyAlert = UIAlertController(title: "買好啦", message: "", preferredStyle: .alert)
+        let alreadyBuyAlert = UIAlertController(title: "飲料來囉", message: "", preferredStyle: .alert)
         
-        let buyAction = UIAlertAction(title: "買了", style: .default) { (UIAlertAction) in
+        let buyAction = UIAlertAction(title: "要喝", style: .default) { (UIAlertAction) in
             
             let passingData = BuyDrinkInformation(user_name: self.name, drink_id: (self.beverageItems?.data[indexPath.item].id)!)
             
@@ -84,7 +84,7 @@ class BeverageTableViewController: UITableViewController {
             self.present(alreadyBuyAlert, animated: true, completion: nil)
         }
         let cancelAction = UIAlertAction(title: "不要", style: .cancel, handler: nil)
-        let goToBathAction = UIAlertAction(title: "洗澡去～", style: .default) { (UIAlertAction) in
+        let goToBathAction = UIAlertAction(title: "回去洗澡～", style: .default) { (UIAlertAction) in
             self.navigationController?.popViewController(animated: true)
         }
         
