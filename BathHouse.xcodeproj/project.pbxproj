@@ -15,6 +15,7 @@
 		561A2B29238381BA00AC7651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561A2B27238381BA00AC7651 /* LaunchScreen.storyboard */; };
 		561A2B322383822D00AC7651 /* BathHouse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561A2B312383822D00AC7651 /* BathHouse.storyboard */; };
 		561A2B342383825600AC7651 /* Beverage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561A2B332383825600AC7651 /* Beverage.storyboard */; };
+		561A2B362383907200AC7651 /* BathHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A2B352383907200AC7651 /* BathHouseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		561A2B2A238381BA00AC7651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		561A2B312383822D00AC7651 /* BathHouse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BathHouse.storyboard; sourceTree = "<group>"; };
 		561A2B332383825600AC7651 /* Beverage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Beverage.storyboard; sourceTree = "<group>"; };
+		561A2B352383907200AC7651 /* BathHouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathHouseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +62,11 @@
 		561A2B1B238381B900AC7651 /* BathHouse */ = {
 			isa = PBXGroup;
 			children = (
-				561A2B20238381B900AC7651 /* MainViewController.swift */,
 				561A2B22238381B900AC7651 /* Main.storyboard */,
 				561A2B312383822D00AC7651 /* BathHouse.storyboard */,
 				561A2B332383825600AC7651 /* Beverage.storyboard */,
+				561A2B20238381B900AC7651 /* MainViewController.swift */,
+				561A2B352383907200AC7651 /* BathHouseViewController.swift */,
 				561A2B25238381BA00AC7651 /* Assets.xcassets */,
 				561A2B30238381DD00AC7651 /* Supporting Files */,
 				561A2B2A238381BA00AC7651 /* Info.plist */,
@@ -156,6 +159,7 @@
 			files = (
 				561A2B21238381B900AC7651 /* MainViewController.swift in Sources */,
 				561A2B1D238381B900AC7651 /* AppDelegate.swift in Sources */,
+				561A2B362383907200AC7651 /* BathHouseViewController.swift in Sources */,
 				561A2B1F238381B900AC7651 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
