@@ -2,18 +2,18 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x0k-Nc-OET">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Beverage Table View Controller-->
         <scene sceneID="qyC-ib-TzS">
             <objects>
-                <tableViewController id="x0k-Nc-OET" customClass="BeverageTableViewController" customModule="BathHouse" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BeverageVC" id="x0k-Nc-OET" customClass="BeverageTableViewController" customModule="BathHouse" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ea3-KY-X6s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BeverageCell" rowHeight="95" id="qJA-o5-FgI" customClass="BeverageTableViewCell" customModule="BathHouse" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="95"/>
@@ -45,7 +45,7 @@
                                         <constraint firstItem="AlB-x5-Ub3" firstAttribute="top" secondItem="Yuf-cZ-pGk" secondAttribute="top" constant="5" id="vyM-3Q-vtg"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="beverageImage" destination="AlB-x5-Ub3" id="4lh-5C-i8h"/>
                                     <outlet property="beverageNameLabel" destination="o0G-3f-49A" id="f0p-xe-HlW"/>

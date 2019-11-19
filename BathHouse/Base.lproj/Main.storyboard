@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YMk-xf-Xal">
-                                <rect key="frame" x="62" y="740" width="290" height="92"/>
+                                <rect key="frame" x="62" y="796" width="290" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URJ-6F-1L9">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="36"/>
@@ -42,21 +42,7 @@
                                             <action selector="enterBathHouse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5p-pt-6Ig"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBl-uh-nl0">
-                                        <rect key="frame" x="0.0" y="56" width="290" height="36"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="去買飲料">
-                                            <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="fZo-Fw-Eej" kind="show" id="U32-7E-l8k"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="hBl-uh-nl0" firstAttribute="width" secondItem="URJ-6F-1L9" secondAttribute="width" id="0MR-5R-jv8"/>
-                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ymQ-xs-ekd">
                                 <rect key="frame" x="281" y="130" width="82" height="48"/>

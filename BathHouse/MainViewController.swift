@@ -49,7 +49,9 @@ class MainViewController: UIViewController {
                     let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
                         DispatchQueue.main.async {
                             let storyboard = UIStoryboard(name: "BathHouse", bundle: nil)
-                            let bathHouseVC =  storyboard.instantiateViewController(identifier: "BathHouseVC")
+                            let bathHouseVC =  storyboard.instantiateViewController(identifier: "BathHouseVC") as! BathHouseViewController
+                            
+                            bathHouseVC.name = input!
                             self.navigationController?.pushViewController(bathHouseVC, animated: true)
                         }
                     }
@@ -65,7 +67,9 @@ class MainViewController: UIViewController {
             }
         }
     }
-
+    @IBAction func goBuyBeverage(_ sender: UIButton) {
+    }
+    
 }
 
 extension MainViewController {

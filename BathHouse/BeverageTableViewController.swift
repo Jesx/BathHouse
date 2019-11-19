@@ -13,6 +13,8 @@ class BeverageTableViewController: UITableViewController {
     var beverageItems: BeverageItems?
     let activityIndicatorView = UIActivityIndicatorView(style: .large)
     
+    var name: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,7 +48,8 @@ class BeverageTableViewController: UITableViewController {
         
         let buyAction = UIAlertAction(title: "買了", style: .default) { (UIAlertAction) in
             
-            let passingData = BuyDrinkInformation(user_name: "test", drink_id: (self.beverageItems?.data[indexPath.item].id)!)
+            let passingData = BuyDrinkInformation(user_name: self.name, drink_id: (self.beverageItems?.data[indexPath.item].id)!)
+            
             guard let uploadData = try? JSONEncoder().encode(passingData) else {
                 return
             }
