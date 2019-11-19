@@ -10,22 +10,43 @@ import UIKit
 
 class BathHouseViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        activityIndicator.isHidden = false
+        BathHouseData().getBathHousePeople { (bathHouse) in
+            DispatchQueue.main.async {
+                self.activityIndicator.isHidden = true
+            }
+        }
+
     }
 
 }
 
-extension BathHouseViewController: UICollectionViewDataSource {
+extension BathHouseViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return 12
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: BathHouseCollectionViewCell.self), for: indexPath) as! BathHouseCollectionViewCell
+        
+        cell.bathHouseImageView.image = UIImage(named: "BoywiBeverage")
+        
+        return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = collectionView.frame.width / 3 - 12
+        
+        return CGSize(width: size, height: size)
+    }
 }

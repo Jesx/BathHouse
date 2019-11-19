@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cover" translatesAutoresizingMaskIntoConstraints="NO" id="oCQ-cU-NUg">
-                                <rect key="frame" x="0.0" y="130" width="414" height="732"/>
+                                <rect key="frame" x="0.0" y="178" width="414" height="684"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="皂滑弄人大澡堂" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dls-sx-C9h">
                                 <rect key="frame" x="0.0" y="88" width="414" height="42"/>
@@ -39,7 +39,7 @@
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="o9p-VJ-XQc" kind="show" id="iQ7-Az-yZ8"/>
+                                            <action selector="enterBathHouse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5p-pt-6Ig"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBl-uh-nl0">
@@ -102,22 +102,52 @@
                                     <constraint firstItem="gIu-YU-sh7" firstAttribute="width" secondItem="ZpP-IF-FaR" secondAttribute="width" id="huf-Hl-lWD"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YGC-CR-jp5">
+                                <rect key="frame" x="20" y="137" width="248.5" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgK-0X-bHd">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="34"/>
+                                        <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="u6X-FY-6Dh">
+                                        <rect key="frame" x="144" y="0.0" width="104.5" height="35"/>
+                                        <segments>
+                                            <segment title="male"/>
+                                            <segment title="female"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="uWe-D8-na1">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AQC-hi-3hV" firstAttribute="leading" secondItem="ymQ-xs-ekd" secondAttribute="trailing" id="9g0-LV-HuM"/>
+                            <constraint firstItem="tgK-0X-bHd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="JFu-rf-goe"/>
                             <constraint firstItem="URJ-6F-1L9" firstAttribute="width" secondItem="oCQ-cU-NUg" secondAttribute="width" multiplier="0.7" id="JO4-Ea-DOp"/>
                             <constraint firstItem="YMk-xf-Xal" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M9U-Nf-EnU"/>
+                            <constraint firstItem="oCQ-cU-NUg" firstAttribute="top" secondItem="AQC-hi-3hV" secondAttribute="bottom" id="QVz-5C-Keo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oCQ-cU-NUg" secondAttribute="bottom" id="TJQ-w7-jv2"/>
                             <constraint firstItem="oCQ-cU-NUg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XPw-ct-uH4"/>
+                            <constraint firstItem="YGC-CR-jp5" firstAttribute="centerY" secondItem="ymQ-xs-ekd" secondAttribute="centerY" id="XQI-tW-Lpl"/>
                             <constraint firstItem="oCQ-cU-NUg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yd0-ah-cJt"/>
+                            <constraint firstItem="AQC-hi-3hV" firstAttribute="bottom" secondItem="ymQ-xs-ekd" secondAttribute="bottom" id="aSk-4L-yvi"/>
+                            <constraint firstItem="uWe-D8-na1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cd4-Mc-etv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YMk-xf-Xal" secondAttribute="bottom" constant="30" id="d2d-BT-kxT"/>
-                            <constraint firstItem="oCQ-cU-NUg" firstAttribute="top" secondItem="Dls-sx-C9h" secondAttribute="bottom" id="gXn-KC-J21"/>
+                            <constraint firstItem="YGC-CR-jp5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="gx7-YE-02a"/>
                             <constraint firstItem="AQC-hi-3hV" firstAttribute="top" secondItem="Dls-sx-C9h" secondAttribute="bottom" id="iUa-OP-H5Q"/>
                             <constraint firstItem="Dls-sx-C9h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jMR-ab-Uxb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AQC-hi-3hV" secondAttribute="trailing" constant="10" id="pfO-t0-04L"/>
                             <constraint firstItem="Dls-sx-C9h" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="qmy-Um-4TM"/>
                             <constraint firstItem="ymQ-xs-ekd" firstAttribute="top" secondItem="Dls-sx-C9h" secondAttribute="bottom" id="skh-7n-YZg"/>
+                            <constraint firstItem="uWe-D8-na1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wJ4-RZ-bqs"/>
+                            <constraint firstItem="YGC-CR-jp5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zgz-EZ-XQh"/>
                             <constraint firstItem="Dls-sx-C9h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zpG-my-dMU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -125,8 +155,17 @@
                     <navigationItem key="navigationItem" id="1qa-nl-GGu">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="rjH-FT-EpD">
                             <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="refresh:" destination="BYZ-38-t0r" id="Ke0-Qj-xww"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="uWe-D8-na1" id="Xsn-LU-dR2"/>
+                        <outlet property="currentPeople" destination="Y8b-O6-2P2" id="SFM-eA-i6o"/>
+                        <outlet property="nameTextField" destination="tgK-0X-bHd" id="s4N-UF-hHw"/>
+                        <outlet property="segmentControl" destination="u6X-FY-6Dh" id="g1c-Ik-Vk2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,6 +199,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BNv-bM-TQH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
